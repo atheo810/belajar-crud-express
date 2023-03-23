@@ -2,6 +2,7 @@
   "name": "belajar-crud-express",
   "version": "1.0.0",
   "description": "belajar CRUD express js",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
