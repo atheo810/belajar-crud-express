@@ -1,4 +1,5 @@
 // import models dari models/UserModels.js
+import { response } from "express";
 import User from "../models/UserModel.js";
 
 // melakukan export dengan contrain getUser menggunakan asyncronus dengan 2 callback ( request, dan response )
@@ -22,6 +23,15 @@ export const getUserById = async (req, res) => {
       },
     });
     res.status(200).json(response);
+  } catch (error) {
+    console.log(error.message);
+  }
+};
+
+export const createUser = async (req, res) => {
+  try {
+    await User.create(req.body);
+    res.status(201).json({ message: "User telah dibuat" });
   } catch (error) {
     console.log(error.message);
   }
