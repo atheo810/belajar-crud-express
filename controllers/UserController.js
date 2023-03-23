@@ -12,3 +12,17 @@ export const getUser = async (req, res) => {
     console.log(error.message);
   }
 };
+
+// melakukan export untuk mencari user dari ID dengan menggunakan User.findone('{syntax db{property}}')
+export const getUserById = async (req, res) => {
+  try {
+    const response = await User.findOne({
+      where: {
+        id: req.params.id,
+      },
+    });
+    res.status(200).json(response);
+  } catch (error) {
+    console.log(error.message);
+  }
+};
