@@ -1,5 +1,5 @@
 // import models dari models/UserModels.js
-import User from "../models/UserModels";
+import User from "../models/UserModel.js";
 
 // melakukan export dengan contrain getUser menggunakan asyncronus dengan 2 callback ( request, dan response )
 // try mencoba response dari asyncronuse User.findAll();
