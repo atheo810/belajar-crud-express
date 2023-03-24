@@ -1,7 +1,6 @@
-// import express dari depedencies
+// import express, dotenv, dan cors, dari depedencies
 import express from "express";
-
-// import cors dari depedencies
+import dotenv from "dotenv";
 import cors from "cors";
 
 // import UserRoute dari "./routes/UserRoute/js"
@@ -19,7 +18,12 @@ app.use(express.json());
 // app menggunakan UserRoute dari import file "./routes/UserRoute/js"
 app.use(UserRoute);
 
-// app jalan/listen pada port 5000, dan memiliki callback ketika diaktifkan berupa console.log();
-app.listen(5000, () => {
-  console.log("Server Telah berjalan di port : 5000");
+// app jalan/listen pada port 5000, dan memiliki callback ketika diaktifkan berupa console.log(); ( manual listen )
+// app.listen(5000, () => {
+//   console.log("Server Telah berjalan di port : 5000");
+// });
+
+// app jalan/listen menggunakan dotenv
+app.listen(process.env.APP_PORT, () => {
+  console.log("Server berjalan pada : Port 5000");
 });

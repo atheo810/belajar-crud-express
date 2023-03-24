@@ -10,6 +10,7 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+// membuat table dengan prisma 
 model Post {
   id        Int      @id @default(autoincrement())
   createdAt DateTime @default(now())
