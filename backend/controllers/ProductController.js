@@ -1,3 +1,5 @@
+import { Response } from "express";
+
 export const getProducts = (req, res) => {};
 
 export const getProductsById = (req, res) => {};
